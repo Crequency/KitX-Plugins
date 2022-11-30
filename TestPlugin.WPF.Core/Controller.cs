@@ -39,16 +39,20 @@ namespace TestPlugin.WPF.Core
                         { "zh-cn", "你好, 世界!" },
                         { "en-us", "Hello, World!" }
                     },
-                    Parameters = new Dictionary<Dictionary<string, string>, string>()
+                    Parameters = new Dictionary<string, Dictionary<string, string>>()
                     {
                         {
+                            "par1",
                             new Dictionary<string, string>()
                             {
                                 { "zh-cn", "参数1" },
                                 { "en-us", "Parameter1" }
-                            },
-                            "void"
+                            }
                         }
+                    },
+                    ParametersType = new List<string>()
+                    {
+                        "void"
                     },
                     HasAppendParameters = false,
                     ReturnValueType = "void"
