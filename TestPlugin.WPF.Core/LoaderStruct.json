@@ -1,5 +1,5 @@
-{
-    "LoaderName": "Loader.WPF.Core",
+﻿{
+    "LoaderName": "KitX.Loader.WPF.Core",
     "LoaderVersion": "v1.0.0",
     "LoaderLanguage": "CSharp",
     "LoaderFramework": "WPF.Core",
