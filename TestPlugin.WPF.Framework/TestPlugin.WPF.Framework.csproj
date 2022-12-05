@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2BF2E4C8-46A2-4F5B-AE6B-B3460BAE3A08}</ProjectGuid>
+    <ProjectGuid>{C9CE2A3F-FFFD-494C-BC9D-020E4ED7F587}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>TestPlugin.Winform.Framework</RootNamespace>
-    <AssemblyName>TestPlugin.Winform.Framework</AssemblyName>
+    <RootNamespace>TestPlugin.WPF.Framework</RootNamespace>
+    <AssemblyName>TestPlugin.WPF.Framework</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -20,7 +20,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\KitX Build\Plugins\TestPlugin.Winform.Framework\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -38,14 +38,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="KitX.Contract.CSharp, Version=22.4.6351.974, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\KitX.Contract.CSharp.22.4.6351.974\lib\net46\KitX.Contract.CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="KitX.Web.Rules, Version=22.4.6351.974, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\KitX.Web.Rules.22.4.6351.974\lib\net46\KitX.Web.Rules.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -89,11 +82,30 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <None Include="LoaderStruct.json" />
+    <None Include="PluginStruct.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\KitX Contracts\KitX.Contract.CSharp\KitX.Contract.CSharp.csproj">
+      <Project>{c1a05e25-8dba-4ca4-88d5-e28d69b76d13}</Project>
+      <Name>KitX.Contract.CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\KitX Rules\KitX.Web.Rules\KitX.Web.Rules.csproj">
+      <Project>{bc6fc695-381a-4556-89a3-7918651e8d56}</Project>
+      <Name>KitX.Web.Rules</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="KitX.Contract.CSharp">
+      <Version>22.4.6351.974</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

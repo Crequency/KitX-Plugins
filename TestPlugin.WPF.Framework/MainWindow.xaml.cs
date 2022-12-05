@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Windows;
 
-namespace TestPlugin.Winform.Framework
+#pragma warning disable CS8603 // 可能返回 null 引用。
+
+namespace TestPlugin.WPF.Framework
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -17,7 +19,7 @@ namespace TestPlugin.Winform.Framework
             InitializeComponent();
             controller = new Controller(this);
 
-            Closed += (sender, e) => Environment.Exit(0);
+            Closed += (x, y) => Environment.Exit(0);
         }
 
         /// <summary>
@@ -74,7 +76,10 @@ namespace TestPlugin.Winform.Framework
         /// <returns>简单描述</returns>
         public Dictionary<string, string> GetSimpleDescription() => new Dictionary<string, string>()
         {
-            { "zh-cn", "简单描述" }
+            { "zh-cn", "简单描述" },
+            { "zh-cnt", "簡單描述" },
+            { "en-us", "Simple Description" },
+            { "ja-jp", "簡単な説明" }
         };
 
         /// <summary>
@@ -83,7 +88,10 @@ namespace TestPlugin.Winform.Framework
         /// <returns>复杂描述</returns>
         public Dictionary<string, string> GetComplexDescription() => new Dictionary<string, string>()
         {
-            { "zh-cn", "复杂描述" }
+            { "zh-cn", "复杂描述" },
+            { "zh-cnt", "複雜描述" },
+            { "en-us", "Complex Description" },
+            { "ja-jp", "複雑な説明" }
         };
 
         /// <summary>
@@ -92,7 +100,10 @@ namespace TestPlugin.Winform.Framework
         /// <returns>完整介绍</returns>
         public Dictionary<string, string> GetTotalDescriptionInMarkdown() => new Dictionary<string, string>()
         {
-            { "zh-cn", "完整介绍" }
+            { "zh-cn", "完整描述" },
+            { "zh-cnt", "完整描述" },
+            { "en-us", "Total Description" },
+            { "ja-jp", "完全な説明" }
         };
 
         /// <summary>
@@ -132,9 +143,11 @@ namespace TestPlugin.Winform.Framework
         public IMarketPluginContract GetMarketPluginContract() => null;
 
         /// <summary>
-        /// 获取根启动文件文件名
+        /// 获取根启动文件名称
         /// </summary>
-        /// <returns>根启动文件文件名</returns>
-        public string GetRootStartupFileName() => "TestPlugin.WPF.Winform.dll";
+        /// <returns>根启动文件名称</returns>
+        public string GetRootStartupFileName() => "TestPlugin.WPF.Core.dll";
     }
 }
+
+#pragma warning restore CS8603 // 可能返回 null 引用。

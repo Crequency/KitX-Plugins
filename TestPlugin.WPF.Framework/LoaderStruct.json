@@ -1,9 +1,9 @@
 ﻿{
     "SelfLoad": false,
-    "LoaderName": "KitX.Loader.WPF.Core",
+    "LoaderName": "KitX.Loader.WPF.Winform",
     "LoaderVersion": "v1.0.0",
     "LoaderLanguage": "CSharp",
-    "LoaderFramework": "WPF.Core",
+    "LoaderFramework": "WPF.Winform",
     "LoaderRunType": 2,
     "SupportOS": [ 10 ],
     "Tags": {

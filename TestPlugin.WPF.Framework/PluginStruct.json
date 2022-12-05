@@ -1,0 +1,52 @@
+﻿{
+    "Name": "TestPlugin.WPF.Framework",
+    "Version": "v1.0.0",
+    "DisplayName": {
+        "zh-cn": "WPF.Core 测试插件",
+        "en-us": "TestPlugin.WPF.Framework"
+    },
+    "AuthorName": "Dynesshely",
+    "PublisherName": "Crequency",
+    "AuthorLink": "https://blog.catrol.cn",
+    "PublisherLink": "https://www.catrol.cn",
+    "SimpleDescription": {
+        "zh-cn": "用于测试于验证 WPF.Framework 框架下的插件可行性",
+        "en-us": "Used to test and verify the feasibility of plug-ins under the WPF.Framework framework"
+    },
+    "ComplexDescription": {
+        "zh-cn": "\u590D\u6742\u63CF\u8FF0",
+        "en-us": "ComplexDescription"
+    },
+    "TotalDescriptionInMarkdown": {
+        "zh-cn": "# Hi, there! \r\n ```cpp \r\n void helloWorld() { std::cout << \"Hello, World!\"; } \r\n ```",
+        "en-us": "# 你好! \r\n ```cpp \r\n void helloWorld() { std::cout << \"Hello, World!\"; } \r\n ```"
+    },
+    "IconInBase64": "Base64 Format Icon",
+    "PublishDate": "2022-12-03T12:02:24.8238944+08:00",
+    "LastUpdateDate": "2022-12-03T12:02:24.8261798+08:00",
+    "IsMarketVersion": false,
+    "Tags": {
+        "tagTest": "test"
+    },
+    "Functions": [
+        {
+            "Name": "print",
+            "DisplayNames": {
+                "zh-cn": "打印字符串",
+                "en-us": "PrintString"
+            },
+            "Parameters": {
+                "ParameterName": {
+                    "zh-cn": "字符串",
+                    "en-us": "String"
+                }
+            },
+            "ParametersType": [
+                "string"
+            ],
+            "HasAppendParameters": false,
+            "ReturnValueType": "void"
+        }
+    ],
+    "RootStartupFileName": "TestPlugin.WPF.Framework.dll"
+}

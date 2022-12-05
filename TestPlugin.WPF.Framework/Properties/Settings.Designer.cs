@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestPlugin.Winform.Framework.Properties
+namespace TestPlugin.WPF.Framework.Properties
 {
 
 
