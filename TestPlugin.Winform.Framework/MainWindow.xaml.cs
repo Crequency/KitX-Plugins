@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows;
 
-namespace TestPlugin.WPF.Winform
+namespace TestPlugin.Winform.Framework
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

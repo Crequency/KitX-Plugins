@@ -1,4 +1,4 @@
-﻿<Window x:Class="TestPlugin.WPF.Winform.MainWindow"
+﻿<Window x:Class="TestPlugin.Winform.Framework.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
