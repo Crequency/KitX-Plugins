@@ -1,4 +1,5 @@
 ﻿using KitX.Contract.CSharp;
+using KitX.Web.Rules;
 using System;
 using System.Collections.Generic;
 using System.Windows;
@@ -13,6 +14,8 @@ namespace TestPlugin.WPF.Core
     public partial class MainWindow : Window, IIdentityInterface
     {
         private readonly Controller controller;
+
+        internal Queue<Command>? sendCommandsBuffer = null;
 
         public MainWindow()
         {

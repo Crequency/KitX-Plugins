@@ -61,16 +61,18 @@ namespace TestPlugin.WPF.Core
             };
         }
 
-        public object Execute(string cmd, object? arg = null)
+        public void Execute(Command command)
         {
 
-            return 0;
         }
 
         public void SetRootPath(string path)
         {
             MessageBox.Show($"SetRootPath({path})");
         }
+
+        public void SetCommandsSendBuffer(ref Queue<Command> commands)
+            => mainwin.sendCommandsBuffer = commands;
 
         public void SetWorkPath(string path)
         {
