@@ -1,5 +1,6 @@
 ﻿using KitX.Contract.CSharp;
 using KitX.Web.Rules;
+using System;
 using System.Collections.Generic;
 using System.Windows;
 
@@ -71,8 +72,7 @@ namespace TestPlugin.WPF.Core
             MessageBox.Show($"SetRootPath({path})");
         }
 
-        public void SetCommandsSendBuffer(ref Queue<Command> commands)
-            => mainwin.sendCommandsBuffer = commands;
+        public void SetSendCommandAction(Action<Command> action) => mainwin.sendCommandAction = action;
 
         public void SetWorkPath(string path)
         {

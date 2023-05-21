@@ -6,7 +6,7 @@ namespace TestPlugin.Winform.Core;
 
 public class Controller : IController
 {
-    private Queue<Command>? commands;
+    private Action<Command>? sendCommandAction;
 
     public void Start()
     {
@@ -35,10 +35,7 @@ public class Controller : IController
         return new();
     }
 
-    public void SetCommandsSendBuffer(ref Queue<Command> commands)
-    {
-        this.commands = commands;
-    }
+    public void SetSendCommandAction(Action<Command> action) => sendCommandAction = action;
 
     public void SetRootPath(string path)
     {

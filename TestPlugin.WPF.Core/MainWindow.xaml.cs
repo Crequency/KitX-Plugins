@@ -15,7 +15,7 @@ namespace TestPlugin.WPF.Core
     {
         private readonly Controller controller;
 
-        internal Queue<Command>? sendCommandsBuffer = null;
+        internal Action<Command>? sendCommandAction;
 
         public MainWindow()
         {
