@@ -46,4 +46,9 @@ public class Controller : IController
     {
         Console.WriteLine($"Work path: {path}");
     }
+
+    public void SetCommandsSendBuffer(ref Queue<Command> commands)
+    {
+        throw new NotImplementedException();
+    }
 }

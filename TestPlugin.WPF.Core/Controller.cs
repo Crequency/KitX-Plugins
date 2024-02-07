@@ -34,7 +34,7 @@ namespace TestPlugin.WPF.Core
         {
             return new List<Function>()
             {
-                new Function()
+                new()
                 {
                     DisplayNames = new Dictionary<string, string>()
                     {
@@ -77,6 +77,11 @@ namespace TestPlugin.WPF.Core
         public void SetWorkPath(string path)
         {
             MessageBox.Show($"SetWorkPath({path})");
+        }
+
+        public void SetCommandsSendBuffer(ref Queue<Command> commands)
+        {
+            throw new NotImplementedException();
         }
     }
 }

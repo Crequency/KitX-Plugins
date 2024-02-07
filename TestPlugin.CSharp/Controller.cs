@@ -30,7 +30,7 @@ public class Controller : IController
 
     public List<Function> GetFunctions()
     {
-        return new();
+        return [];
     }
 
     public void SetSendCommandAction(Action<Command> action) => sendCommandAction = action;
@@ -43,5 +43,10 @@ public class Controller : IController
     public void SetWorkPath(string path)
     {
         Console.WriteLine($"Work path: {path}");
+    }
+
+    public void SetCommandsSendBuffer(ref Queue<Command> commands)
+    {
+        throw new NotImplementedException();
     }
 }
