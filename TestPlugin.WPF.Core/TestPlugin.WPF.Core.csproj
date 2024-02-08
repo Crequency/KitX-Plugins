@@ -12,7 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\KitX Contracts\KitX.Contract.CSharp\KitX.Contract.CSharp.csproj" />
+        <ProjectReference Include="..\..\..\KitX Standard\KitX Contracts\KitX.Contract.CSharp\KitX.Contract.CSharp.csproj" />
     </ItemGroup>
 
     <ItemGroup>
