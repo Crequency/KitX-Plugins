@@ -1,5 +1,5 @@
 ﻿using KitX.Contract.CSharp;
-using KitX.Web.Rules;
+using KitX.Shared.WebCommand;
 using System;
 using System.Collections.Generic;
 using System.Windows;

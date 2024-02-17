@@ -29,22 +29,23 @@
         "tagTest": "test"
     },
     "Functions": [{
-        "Name": "print",
-        "DisplayNames": {
-            "zh-cn": "打印字符串",
-            "en-us": "PrintString"
-        },
-        "Parameters": {
-            "ParameterName": {
-                "zh-cn": "字符串",
-                "en-us": "String"
-            }
-        },
-        "ParametersType": [
-            "string"
-        ],
-        "HasAppendParameters": false,
-        "ReturnValueType": "void"
-    }],
+	  "Name": "HelloWorld",
+	  "DisplayNames": {
+		"zh-cn": "你好, 世界!",
+		"en-us": "Hello, World!"
+	  },
+	  "Parameters": [
+		{
+		  "Name": "par1",
+		  "DisplayNames": {
+			"zh-cn": "参数1",
+			"en-us": "Parameter1"
+		  },
+		  "Type": "string",
+		  "IsAppendable": false
+		}
+	  ],
+	  "ReturnValueType": "void"
+	}],
     "RootStartupFileName": "TestPlugin.WPF.Core.dll"
 }

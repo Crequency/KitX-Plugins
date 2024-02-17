@@ -1,5 +1,6 @@
 ﻿using KitX.Contract.CSharp;
-using KitX.Web.Rules;
+using KitX.Shared.Plugin;
+using KitX.Shared.WebCommand;
 using System;
 using System.Collections.Generic;
 using System.Windows;
@@ -36,27 +37,26 @@ namespace TestPlugin.WPF.Core
             {
                 new()
                 {
+                    Name = "HelloWorld",
                     DisplayNames = new Dictionary<string, string>()
                     {
                         { "zh-cn", "你好, 世界!" },
                         { "en-us", "Hello, World!" }
                     },
-                    Parameters = new Dictionary<string, Dictionary<string, string>>()
+                    Parameters = new List<Parameter>()
                     {
+                        new ()
                         {
-                            "par1",
-                            new Dictionary<string, string>()
+                            Name = "par1",
+                            DisplayNames = new Dictionary<string, string>()
                             {
                                 { "zh-cn", "参数1" },
                                 { "en-us", "Parameter1" }
-                            }
+                            },
+                            Type = "string",
+                            IsAppendable = false
                         }
                     },
-                    ParametersType = new List<string>()
-                    {
-                        "void"
-                    },
-                    HasAppendParameters = false,
                     ReturnValueType = "void"
                 }
             };

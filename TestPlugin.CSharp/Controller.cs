@@ -1,5 +1,6 @@
 ﻿using KitX.Contract.CSharp;
-using KitX.Web.Rules;
+using KitX.Shared.Plugin;
+using KitX.Shared.WebCommand;
 using System.Text.Json;
 
 namespace TestPlugin.CSharp;
