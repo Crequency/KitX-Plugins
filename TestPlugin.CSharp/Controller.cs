@@ -1,13 +1,14 @@
 ﻿using KitX.Contract.CSharp;
 using KitX.Shared.Plugin;
 using KitX.Shared.WebCommand;
+using KitX.Shared.WebCommand.Details;
 using System.Text.Json;
 
 namespace TestPlugin.CSharp;
 
 public class Controller : IController
 {
-    private Action<Command>? sendCommandAction;
+    private Action<Request>? sendCommandAction;
 
     public void Start()
     {
@@ -34,20 +35,9 @@ public class Controller : IController
         return [];
     }
 
-    public void SetSendCommandAction(Action<Command> action) => sendCommandAction = action;
+    public void SetSendCommandAction(Action<Request> action) => sendCommandAction = action;
 
-    public void SetRootPath(string path)
-    {
-        Console.WriteLine($"Root path: {path}");
-    }
-
-    public void SetWorkPath(string path)
-    {
-        Console.WriteLine($"Work path: {path}");
-    }
-
-    public void SetCommandsSendBuffer(ref Queue<Command> commands)
-    {
-        throw new NotImplementedException();
-    }
+    public void SetWorkingDetail(PluginWorkingDetail workingDetail) => Console.WriteLine(
+        $"WorkingDetail: {JsonSerializer.Serialize(workingDetail)}"
+    );
 }
