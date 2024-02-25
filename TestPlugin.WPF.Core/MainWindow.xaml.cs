@@ -85,19 +85,7 @@ public partial class MainWindow : Window, IIdentityInterface
                     { "en-us", "Hello KitX !" },
                 },
                 ReturnValueType = "void",
-                Parameters = [
-                    new Parameter()
-                    {
-                        Name = "greet",
-                        DisplayNames = new()
-                        {
-                            { "zh-cn", "问候语" },
-                            { "en-us", "GreetingText" },
-                        },
-                        Type = "string",
-                        IsAppendable = false,
-                    }
-                ],
+                Parameters = [],
             },
         ],
         Tags = new()

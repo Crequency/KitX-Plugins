@@ -2,6 +2,7 @@
 using KitX.Shared.WebCommand;
 using KitX.Shared.WebCommand.Details;
 using System;
+using System.Windows;
 
 namespace TestPlugin.WPF.Core;
 
@@ -28,7 +29,10 @@ public class Controller(MainWindow mainwin) : IController
 
     public void Execute(Command command)
     {
-
+        if (command.FunctionName.Equals("HelloKitX"))
+        {
+            MessageBox.Show("Hello KitX !");
+        }
     }
 
     public void SetWorkingDetail(PluginWorkingDetail workingDetail) => WorkingDetail = workingDetail;
