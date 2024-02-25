@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <OutputType>Library</OutputType>
-        <TargetFramework>net7.0-windows</TargetFramework>
+        <TargetFramework>net8.0-windows</TargetFramework>
         <Nullable>enable</Nullable>
         <UseWPF>true</UseWPF>
     </PropertyGroup>
@@ -12,13 +12,11 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\KitX Contracts\KitX.Contract.CSharp\KitX.Contract.CSharp.csproj" />
+        <ProjectReference Include="..\..\..\KitX Standard\KitX Contracts\KitX.Contract.CSharp\KitX.Contract.CSharp.csproj" />
+        <ProjectReference Include="..\..\..\KitX Standard\KitX.Shared\KitX.Shared.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-        <None Update="Assets\Descr\zh-cn.md">
-            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-        </None>
         <None Update="LoaderStruct.json">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>

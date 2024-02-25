@@ -1,50 +1,53 @@
-{
+﻿{
     "Name": "TestPlugin.WPF.Core",
-    "Version": "v1.0.0",
     "DisplayName": {
-        "zh-cn": "WPF.Core 测试插件",
+        "zh-cn": "TestPlugin.WPF.Core",
         "en-us": "TestPlugin.WPF.Core"
     },
-    "AuthorName": "Dynesshely",
+    "Version": "1.0.0.307",
+    "AuthorLink": "https://github.com/Crequency/KitX/",
+    "AuthorName": "Crequency",
+    "PublisherLink": "https://github.com/Crequency/",
     "PublisherName": "Crequency",
-    "AuthorLink": "https://blog.catrol.cn",
-    "PublisherLink": "https://www.catrol.cn",
+    "PublishDate": "2024-02-20T23:40:00.5475765+08:00",
+    "LastUpdateDate": "2024-02-20T23:40:00.5475782+08:00",
     "SimpleDescription": {
-        "zh-cn": "用于测试于验证 WPF.Core 框架下的插件可行性",
-        "en-us": "Used to test and verify the feasibility of plug-ins under the WPF.Core framework"
+        "zh-cn": "TestPlugin.WPF.Core",
+        "en-us": "TestPlugin.WPF.Core"
     },
     "ComplexDescription": {
-        "zh-cn": "\u590D\u6742\u63CF\u8FF0",
-        "en-us": "ComplexDescription"
+        "zh-cn": "\u7528\u4E8E\u6D4B\u8BD5\u4E8E\u9A8C\u8BC1 WPF.Core \u6846\u67B6\u4E0B\u7684\u63D2\u4EF6\u53EF\u884C\u6027",
+        "en-us": "Used to test and verify the feasibility of plug-ins under the WPF.Core framework"
     },
     "TotalDescriptionInMarkdown": {
-        "zh-cn": "# Hi, there! \r\n ```cpp \r\n void helloWorld() { std::cout << \"Hello, World!\"; } \r\n ```",
-        "en-us": "# 你好! \r\n ```cpp \r\n void helloWorld() { std::cout << \"Hello, World!\"; } \r\n ```"
+        "zh-cn": "# \u4F60\u597D!\r\n\u0060\u0060\u0060cpp\r\nvoid helloWorld(string greet) {\r\n    std::cout \u003C\u003C \u0022Hello, World!\u0022;\r\n}\r\n\u0060\u0060\u0060",
+        "en-us": "# Hi, there!\r\n\u0060\u0060\u0060cpp\r\nvoid helloWorld(string greet) {\r\n    std::cout \u003C\u003C \u0022Hello, World!\u0022;\r\n}\r\n\u0060\u0060\u0060"
     },
-    "IconInBase64": "Base64 Format Icon",
-    "PublishDate": "2022-12-03T12:02:24.8238944+08:00",
-    "LastUpdateDate": "2022-12-03T12:02:24.8261798+08:00",
+    "IconInBase64": "",
     "IsMarketVersion": false,
+    "RootStartupFileName": "TestPlugin.WPF.Core.dll",
+    "Functions": [
+        {
+            "Name": "HelloKitX",
+            "DisplayNames": {
+                "zh-cn": "\u4F60\u597D KitX !",
+                "en-us": "Hello KitX !"
+            },
+            "ReturnValueType": "void",
+            "Parameters": [
+                {
+                    "Name": "greet",
+                    "DisplayNames": {
+                        "zh-cn": "\u95EE\u5019\u8BED",
+                        "en-us": "GreetingText"
+                    },
+                    "Type": "string",
+                    "IsAppendable": false
+                }
+            ]
+        }
+    ],
     "Tags": {
-        "tagTest": "test"
-    },
-    "Functions": [{
-        "Name": "print",
-        "DisplayNames": {
-            "zh-cn": "打印字符串",
-            "en-us": "PrintString"
-        },
-        "Parameters": {
-            "ParameterName": {
-                "zh-cn": "字符串",
-                "en-us": "String"
-            }
-        },
-        "ParametersType": [
-            "string"
-        ],
-        "HasAppendParameters": false,
-        "ReturnValueType": "void"
-    }],
-    "RootStartupFileName": "TestPlugin.WPF.Core.dll"
+        "IsTestPlugin": "true"
+    }
 }
