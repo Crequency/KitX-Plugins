@@ -1,6 +1,6 @@
 ﻿using KitX.Contract.CSharp;
-using KitX.Shared.Plugin;
-using KitX.Shared.WebCommand;
+using KitX.Shared.CSharp.Plugin;
+using KitX.Shared.CSharp.WebCommand;
 using System;
 using System.Reflection;
 using System.Windows;

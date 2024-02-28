@@ -1,5 +1,5 @@
 ﻿using KitX.Contract.CSharp;
-using KitX.Shared.Plugin;
+using KitX.Shared.CSharp.Plugin;
 
 namespace TestPlugin.Winform.Core;
 

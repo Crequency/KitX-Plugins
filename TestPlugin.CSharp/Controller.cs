@@ -1,7 +1,7 @@
 ﻿using KitX.Contract.CSharp;
-using KitX.Shared.Plugin;
-using KitX.Shared.WebCommand;
-using KitX.Shared.WebCommand.Details;
+using KitX.Shared.CSharp.Plugin;
+using KitX.Shared.CSharp.WebCommand;
+using KitX.Shared.CSharp.WebCommand.Details;
 using System.Text.Json;
 
 namespace TestPlugin.CSharp;

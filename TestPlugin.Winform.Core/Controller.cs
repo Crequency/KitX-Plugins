@@ -1,6 +1,6 @@
 ﻿using KitX.Contract.CSharp;
-using KitX.Shared.WebCommand;
-using KitX.Shared.WebCommand.Details;
+using KitX.Shared.CSharp.WebCommand;
+using KitX.Shared.CSharp.WebCommand.Details;
 using System.Text.Json;
 
 namespace TestPlugin.Winform.Core;
