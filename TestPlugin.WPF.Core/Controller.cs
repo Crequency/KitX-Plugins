@@ -1,8 +1,8 @@
-﻿using KitX.Contract.CSharp;
+﻿using System;
+using System.Windows;
+using KitX.Contract.CSharp;
 using KitX.Shared.CSharp.WebCommand;
 using KitX.Shared.CSharp.WebCommand.Details;
-using System;
-using System.Windows;
 
 namespace TestPlugin.WPF.Core;
 
