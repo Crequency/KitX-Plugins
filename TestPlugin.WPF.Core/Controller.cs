@@ -31,7 +31,7 @@ public class Controller(MainWindow mainwin) : IController
     {
         if (command.FunctionName.Equals("HelloKitX"))
         {
-            MessageBox.Show("Hello KitX !");
+            Functions.HelloKitX();
         }
     }
 
