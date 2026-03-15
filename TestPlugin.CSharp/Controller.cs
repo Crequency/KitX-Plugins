@@ -1,14 +1,23 @@
-﻿using System.Text.Json;
+﻿using System.Text;
+using System.Text.Json;
 using KitX.Contract.CSharp;
 using KitX.Shared.CSharp.Plugin;
 using KitX.Shared.CSharp.WebCommand;
 using KitX.Shared.CSharp.WebCommand.Details;
+using KitX.Shared.CSharp.WebCommand.Infos;
 
 namespace TestPlugin.CSharp;
 
 public class Controller : IController
 {
     private Action<Request>? sendCommandAction;
+
+    private static readonly JsonSerializerOptions serializerOptions = new()
+    {
+        WriteIndented = true,
+        IncludeFields = true,
+        PropertyNameCaseInsensitive = true,
+    };
 
     public void Start()
     {
@@ -29,6 +38,13 @@ public class Controller : IController
     {
         Console.WriteLine($"Execute: {JsonSerializer.Serialize(cmd)}");
 
+        // 从 Tags 中获取 RequestId，用于发送响应
+        string? requestId = null;
+        if (cmd.Tags is not null && cmd.Tags.TryGetValue("RequestId", out var reqId))
+        {
+            requestId = reqId;
+        }
+
         if (cmd.FunctionName == "SayHello")
         {
             // 从参数中获取 name
@@ -42,6 +58,32 @@ public class Controller : IController
 
             var result = $"Hello, {name}!";
             Console.WriteLine($"SayHello result: {result}");
+
+            // 如果有 RequestId，发送响应
+            if (requestId is not null && sendCommandAction is not null)
+            {
+                var responseBytes = Encoding.UTF8.GetBytes(result);
+
+                var responseCommand = new Command
+                {
+                    Request = CommandRequestInfo.ReceiveCommand,
+                    PluginConnectionId = cmd.PluginConnectionId ?? string.Empty,
+                    Body = responseBytes,
+                    BodyLength = responseBytes.Length,
+                    Tags = new Dictionary<string, string>
+                    {
+                        { "RequestId", requestId }
+                    }
+                };
+
+                var responseRequest = new Request
+                {
+                    Content = JsonSerializer.Serialize(responseCommand, serializerOptions)
+                };
+
+                sendCommandAction.Invoke(responseRequest);
+                Console.WriteLine($"[DEBUG] Response sent via sendCommandAction: {result}");
+            }
         }
     }
 
