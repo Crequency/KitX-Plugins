@@ -1,0 +1,26 @@
+{
+    "Name": "TestPlugin.WPF.Core",
+    "Version": "1.0.0",
+    "DisplayName": {
+        "zh-cn": "TestPlugin.WPF.Core",
+        "en-us": "TestPlugin.WPF.Core"
+    },
+    "AuthorName": "Crequency",
+    "AuthorLink": "https://github.com/Crequency/KitX/",
+    "PublisherName": "Crequency",
+    "PublisherLink": "https://github.com/Crequency/",
+    "SimpleDescription": {
+        "zh-cn": "TestPlugin.WPF.Core",
+        "en-us": "TestPlugin.WPF.Core"
+    },
+    "ComplexDescription": {
+        "zh-cn": "用于测试于验证 WPF.Core 框架下的插件可行性",
+        "en-us": "Used to test and verify the feasibility of plug-ins under the WPF.Core framework"
+    },
+    "IconInBase64": "",
+    "IsMarketVersion": false,
+    "RootStartupFileName": "TestPlugin.WPF.Core.dll",
+    "Tags": {
+        "IsTestPlugin": "true"
+    }
+}

@@ -20,6 +20,9 @@
         <None Update="LoaderStruct.json">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
+        <None Update="PluginStruct.json">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
 </Project>

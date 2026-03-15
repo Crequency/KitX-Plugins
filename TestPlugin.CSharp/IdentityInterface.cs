@@ -68,6 +68,32 @@ public class IdentityInterface : IIdentityInterface
         IsMarketVersion = false,
         RootStartupFileName = "TestPlugin.CSharp.dll",
         Tags = [],
-        Functions = []
+        Functions = [
+            new Function()
+            {
+                Name = "SayHello",
+                DisplayNames = new()
+                {
+                    { "zh-cn", "打招呼" },
+                    { "zh-tw", "打招呼" },
+                    { "en-us", "Say Hello" },
+                },
+                ReturnValueType = "string",
+                Parameters = [
+                    new Parameter()
+                    {
+                        Name = "name",
+                        Type = "string",
+                        DisplayNames = new()
+                        {
+                            { "zh-cn", "姓名" },
+                            { "zh-tw", "姓名" },
+                            { "en-us", "Name" },
+                        },
+                        IsOptional = false,
+                    }
+                ],
+            }
+        ]
     };
 }
