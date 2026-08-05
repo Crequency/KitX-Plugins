@@ -82,7 +82,6 @@ public class Controller : IController
                 };
 
                 sendCommandAction.Invoke(responseRequest);
-                Console.WriteLine($"[DEBUG] Response sent via sendCommandAction: {result}");
             }
         }
     }
