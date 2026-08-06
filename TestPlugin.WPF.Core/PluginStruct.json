@@ -1,52 +1,25 @@
-﻿{
+{
     "Name": "TestPlugin.WPF.Core",
+    "Version": "1.0.0",
     "DisplayName": {
         "zh-cn": "TestPlugin.WPF.Core",
         "en-us": "TestPlugin.WPF.Core"
     },
-    "Version": "1.0.0.307",
-    "AuthorLink": "https://github.com/Crequency/KitX/",
     "AuthorName": "Crequency",
-    "PublisherLink": "https://github.com/Crequency/",
+    "AuthorLink": "https://github.com/Crequency/KitX/",
     "PublisherName": "Crequency",
-    "PublishDate": "2024-02-20T23:40:00.5475765+08:00",
-    "LastUpdateDate": "2024-02-20T23:40:00.5475782+08:00",
+    "PublisherLink": "https://github.com/Crequency/",
     "SimpleDescription": {
         "zh-cn": "TestPlugin.WPF.Core",
         "en-us": "TestPlugin.WPF.Core"
     },
     "ComplexDescription": {
-        "zh-cn": "\u7528\u4E8E\u6D4B\u8BD5\u4E8E\u9A8C\u8BC1 WPF.Core \u6846\u67B6\u4E0B\u7684\u63D2\u4EF6\u53EF\u884C\u6027",
+        "zh-cn": "用于测试于验证 WPF.Core 框架下的插件可行性",
         "en-us": "Used to test and verify the feasibility of plug-ins under the WPF.Core framework"
-    },
-    "TotalDescriptionInMarkdown": {
-        "zh-cn": "# \u4F60\u597D!\r\n\u0060\u0060\u0060cpp\r\nvoid helloWorld(string greet) {\r\n    std::cout \u003C\u003C \u0022Hello, World!\u0022;\r\n}\r\n\u0060\u0060\u0060",
-        "en-us": "# Hi, there!\r\n\u0060\u0060\u0060cpp\r\nvoid helloWorld(string greet) {\r\n    std::cout \u003C\u003C \u0022Hello, World!\u0022;\r\n}\r\n\u0060\u0060\u0060"
     },
     "IconInBase64": "",
     "IsMarketVersion": false,
     "RootStartupFileName": "TestPlugin.WPF.Core.dll",
-    "Functions": [
-        {
-            "Name": "HelloKitX",
-            "DisplayNames": {
-                "zh-cn": "\u4F60\u597D KitX !",
-                "en-us": "Hello KitX !"
-            },
-            "ReturnValueType": "void",
-            "Parameters": [
-                {
-                    "Name": "greet",
-                    "DisplayNames": {
-                        "zh-cn": "\u95EE\u5019\u8BED",
-                        "en-us": "GreetingText"
-                    },
-                    "Type": "string",
-                    "IsAppendable": false
-                }
-            ]
-        }
-    ],
     "Tags": {
         "IsTestPlugin": "true"
     }

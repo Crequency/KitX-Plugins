@@ -1,9 +1,9 @@
-﻿using KitX.Contract.CSharp;
-using KitX.Shared.Plugin;
-using KitX.Shared.WebCommand;
-using System;
+﻿using System;
 using System.Reflection;
 using System.Windows;
+using KitX.Contract.CSharp;
+using KitX.Shared.CSharp.Plugin;
+using KitX.Shared.CSharp.WebCommand;
 
 namespace TestPlugin.WPF.Core;
 
@@ -87,7 +87,19 @@ public partial class MainWindow : Window, IIdentityInterface
                 ReturnValueType = "void",
                 Parameters = [],
             },
+            new Function()
+            {
+                Name = "GetInput",
+                DisplayNames = new()
+                {
+                    { "zh-cn", "获取输入内容" },
+                    { "en-us", "Get Input Text" },
+                },
+                ReturnValueType = "string",
+                Parameters = [],
+            },
         ],
+        SupportedTriggers = ["UserInput"],
         Tags = new()
         {
             { "IsTestPlugin", "true" }
@@ -97,4 +109,17 @@ public partial class MainWindow : Window, IIdentityInterface
     public IController GetController() => controller;
 
     public IMarketPluginContract GetMarketPluginContract() => null!;
+
+    /// <summary>
+    /// 获取输入框中的文本内容
+    /// </summary>
+    internal string GetInputText() => TriggerInputBox?.Text ?? string.Empty;
+
+    /// <summary>
+    /// 触发器按钮点击事件：发送纯信号触发器
+    /// </summary>
+    private void OnFireTrigger(object sender, RoutedEventArgs e)
+    {
+        TriggerHelper.FireTrigger(sendCommandAction, "UserInput");
+    }
 }
