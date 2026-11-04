@@ -9,11 +9,32 @@
         SizeToContent="WidthAndHeight"
         mc:Ignorable="d">
     <Grid>
-        <TextBlock Margin="200,150"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="36"
-                   Foreground="White"
-                   Text="Hello KitX!"/>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Margin="200,100,200,20"
+                       HorizontalAlignment="Center"
+                       FontSize="36"
+                       Foreground="White"
+                       Text="Hello KitX!"/>
+
+            <!-- Trigger Test Section -->
+            <StackPanel HorizontalAlignment="Center" Margin="0,20,0,100">
+                <TextBlock Text="Trigger Test"
+                           FontSize="18"
+                           Foreground="White"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,10"/>
+                <TextBox Name="TriggerInputBox"
+                         Width="250"
+                         Height="30"
+                         Margin="0,0,0,10"
+                         Text=""/>
+                <Button Name="FireTriggerButton"
+                        Content="Fire Trigger"
+                        Width="250"
+                        Height="35"
+                        Click="OnFireTrigger"
+                        FontSize="14"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

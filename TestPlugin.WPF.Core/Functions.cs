@@ -24,4 +24,9 @@ public class Functions
     {
         MessageBox.Show($"Hello {name} !");
     }
+
+    [Function(nameof(GetInput))]
+    [Translation("DisplayName", "zh-CN", "获取输入内容")]
+    [Translation("DisplayName", "en-US", "Get Input Text")]
+    public static string GetInput() => string.Empty; // 实际由 Controller.Execute 处理返回值
 }
